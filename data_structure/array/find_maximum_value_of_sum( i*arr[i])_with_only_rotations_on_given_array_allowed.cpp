@@ -1,3 +1,15 @@
+/*
+Given an array, only rotation operation is allowed on array. We can rotate the array as many times as we want. Return the maximum possible summation of i*arr[i].
+
+Examples :  
+
+Input: arr[] = {1, 20, 2, 10}
+Output: 72
+We can get 72 by rotating array twice.
+{2, 10, 1, 20}
+20*3 + 1*2 + 10*1 + 2*0 = 72
+*/
+
 #include<iostream>
 #include<string>
 #include <cmath>
