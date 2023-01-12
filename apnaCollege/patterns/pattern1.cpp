@@ -140,28 +140,28 @@ int main() {
         *             *
     */
 
-    int n;
-    cout << "Enter value of n" << endl;
-    cin >> n;
+    // int n;
+    // cout << "Enter value of n" << endl;
+    // cin >> n;
 
-    // upper half of butterfly
-    for(int i=1; i<=n; ++i) {
-        // print *
-        for(int j=1; j<=i; ++j) {
-            cout << "* ";
-        }
-        // print space
-        for(int j=1; j<=(pow(2, n-1) - 2*i); ++j) {
-            cout << "_ ";
-        }
-        // print *
-        for(int j=1; j<=i; ++j) {
-            cout << "* ";
-        }
-        cout << endl;
-    }
+    // // upper half of butterfly
+    // for(int i=1; i<=n; ++i) {
+    //     // print *
+    //     for(int j=1; j<=i; ++j) {
+    //         cout << "* ";
+    //     }
+    //     // print space
+    //     for(int j=1; j<=(pow(2, n-1) - 2*i); ++j) {
+    //         cout << "_ ";
+    //     }
+    //     // print *
+    //     for(int j=1; j<=i; ++j) {
+    //         cout << "* ";
+    //     }
+    //     cout << endl;
+    // }
 
-    // lower half of butterfly
+    // // lower half of butterfly
     // for(int i=n; i>=1; --i) {
     //     // print *
     //     for(int j=1; j<=i; ++j) {
