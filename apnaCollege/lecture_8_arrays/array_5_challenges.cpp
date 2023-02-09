@@ -190,7 +190,7 @@ int main()
     //     // 1st occurrence
     //     if(newArr[arr[i]] == -1) {
     //         newArr[arr[i]] = i;
-    //     } 
+    //     }
     //     // more than one occurrence
     //     else {
     //         minIdx = min(minIdx, newArr[arr[i]]);
@@ -198,6 +198,63 @@ int main()
     // }
 
     // cout << "Min is " << minIdx + 1;
+
+    /*
+    7. Given an unsorted array A of size N of non-negative integers, find a continuous subarray which adds to a given number S.
+    1 <= N <= 10^5
+    0 <= Ai <= 10^10
+
+    eg: N = 5, S = 12
+        A[] = {1, 2, 3, 7, 5} output should be 2th and 4th position. Because from 2nd to 4th is 12. i.e 2 + 3 + 7 = 12
+    */
+
+    // 1st approach, finding all possible subarrays, find sum of each subarrays, and compare it with S, and returns start and end
+    // int n, s, mySum = 0;
+
+    // cout << "Enter array size\n";
+    // cin >> n;
+
+    // int arr[n];
+
+    // cout << "Enter array elements\n";
+    // for(int i=0; i<n; ++i) {
+    //     cin >> arr[i];
+    // }
+
+    // cout << "Enter value of S\n";
+    // cin >> s;
+    
+    // for(int i=0; i<n; i++) {
+    //     for(int j=i; j<n; ++j) {
+    //         mySum = 0;
+    //         for(int k=i; k<=j; ++k) {
+    //             cout << arr[k] << " ";
+    //             mySum += arr[k];
+    //         }
+    //         cout << "( " << mySum << " }";
+    //         cout << endl;
+    //         if(mySum == s) {
+    //             cout <<  "from i = " << i << " to i = " << j;
+    //             return 0;
+    //         }
+    //     }
+    // }
+
+    // 2nd approach
+    // int n, s, mySum = 0;
+
+    // cout << "Enter array size\n";
+    // cin >> n;
+
+    // int arr[n];
+
+    // cout << "Enter array elements\n";
+    // for(int i=0; i<n; ++i) {
+    //     cin >> arr[i];
+    // }
+
+    // cout << "Enter value of S\n";
+    // cin >> s;
 
     return 0;
 }
