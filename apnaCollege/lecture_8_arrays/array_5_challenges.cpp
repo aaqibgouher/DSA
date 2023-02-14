@@ -184,7 +184,7 @@ int main()
     // }
 
     // // for min, taking max constant
-    // int minIdx = INT_MAX;
+    // int minIdx = max = INT_MAX;
 
     // for(int i=0; i<n; ++i) {
     //     // 1st occurrence
@@ -240,21 +240,44 @@ int main()
     //     }
     // }
 
-    // 2nd approach
-    // int n, s, mySum = 0;
-
-    // cout << "Enter array size\n";
+    /*
+        8. You are given an array arr[] of N integers including 0. The task is to find the smallest positive number missing
+        from the array.
+        1 <= N <= 10^6
+        -10^6 <= Ai <= 10^6
+        eg: {0, -9, 1, 3, -4, 5}, here smalled missing positive number is 2. Ans is 2;
+    */
+    // 1st approach
+    // int n, N = 1e6 + 2;
+    // cout << "Enter array size" << endl;
     // cin >> n;
 
     // int arr[n];
+    // bool check[N];
 
-    // cout << "Enter array elements\n";
+    // cout << "Enter array element" << endl;
     // for(int i=0; i<n; ++i) {
     //     cin >> arr[i];
     // }
 
-    // cout << "Enter value of S\n";
-    // cin >> s;
+    // for(int i=0; i<N; ++i) {
+    //     check[i] = false;
+    // }
+
+    // for(int i=0; i<n; ++i) {
+    //     if(arr[i] >= 0) {
+    //         check[arr[i]] = true;
+    //     }
+    // }
+
+    // for(int i=0; i<N; ++i) {
+    //     if(check[i] == false) {
+    //         cout << i << " ";
+    //         break;
+    //     }
+    // }
+
+
 
     return 0;
 }
