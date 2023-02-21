@@ -47,16 +47,52 @@ int main() {
         4. Find max frequence of a character in a string:
         eg; "abcacbade", output: freq = 3, output = 3
     */
-    // string str = "abcacbade";
-    // int max1 = INT_MIN, max2 = INT_MIN;
-    // char ch1 = str[0], ch2 = str[0];
+    // 1st
+    // string str = "aaaaaaabbbbaaaa";
 
-    // sort(str.begin(), str.end());
+    // sort(str.begin(), str.end()); // aaabbbcc
+    // char c1 = str[0], c2 = '\0';
+    // int count = 0, maxChar = INT_MIN;
 
     // for(int i=0; i<str.length(); ++i) {
-    //     if()
+    //     if(c1 == str[i]) {
+    //         count ++;
+    //     } else {
+    //         if(maxChar < count) {
+    //             maxChar = count;
+    //             c2 = str[i-1];
+    //         }
+    //         // maxChar = max(maxChar, count);
+    //         count = 1;
+    //         c1 = str[i];
+    //     }
     // }
 
+    // cout << maxChar << " " << c2;
+
+    // 2nd approach
+    // string str = "aaabaaabaaa";
+    // char ch;
+
+    // int freq[26], maxChar = INT_MIN;
+
+    // for(int i=0; i<26; ++i) {
+    //     freq[i] = 0;
+    // }
+
+    // for(int i=0; i<str.length(); ++i) {
+    //     freq[str[i] - 'a'] ++;
+    // }
+
+    // for(int i=0; i<str.length(); ++i) {
+    //     if(maxChar < freq[i]) {
+    //         maxChar = freq[i];
+    //         ch = i + 'a';
+    //     }
+    // }
+
+    // cout << maxChar << " " << ch;
+    
 
     return 0;
 }
