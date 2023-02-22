@@ -26,6 +26,31 @@ void sieveOfEratosthenes(int num) {
     }
 }
 
+void primeFactorUsingSieve(int n) {
+    int spf[n+1];
+
+    // initialize with the index
+    for(int i=2; i<=n; ++i) {
+        spf[i] = i;
+    }
+
+    // iterate over spf, and set the smallest prime factor for an index
+    for(int i=2; i<=n; ++i) {
+        if(spf[i] == i) {
+            for(int j=i*i; j<=n; j+=i) {
+                if(spf[j] == j) {
+                    spf[j] = i;
+                }
+            }
+        }
+    }
+
+    while(n != 1) {
+        cout << spf[n] << " ";
+        n /= spf[n];
+    }
+}
+
 int main() {
     /*
         1. Sieve Of Eratosthenes; A method to find all possible prime numbers in a given range. 
@@ -38,6 +63,24 @@ int main() {
     // cin >> n;
 
     // sieveOfEratosthenes(n);
+
+    /*
+        2. Prime factorization using Sieve: 
+        eg: 20 = 2 * 2 * 5 * 1
+        Approach: Lets say n = 20, take an array spf[n+1] = i, start iterating over spf, from 2 to n, and check whether spf[i] == i
+        if true, then iterate once again, and mark all the smallest prime factor, and on the index, take its value. Again, mark
+        only when, spf[j] = j. Eg. in case of 2, at index 4, value will be 2, it means, for 4, spf is 2, similarly for 6, 
+        spf[6] = 2. It shows the smalles prime fact for the index. Now, we will just iterate untill our num = 1, print spf[num]
+        and num = num / spf[num]
+    */
+    int num;
+
+    cout << "Enter your num\n";
+    cin >> num;
+
+    primeFactorUsingSieve(num);
+    
+
 
     return 0;
 }
