@@ -69,17 +69,32 @@ string moveXToEnd(string str) {
     return ch + restStr;
 }
 
-void allSubStr(string str, int i, int j) {
-    if(i == str.length()) return;
-
-    if(i == j) cout << str[i] << " ";
-    else cout << str[i] << str[j] << " ";
-
-    if(j == str.length()) {
-        allSubStr(str, i+1, i+1);
-    } else {
-        allSubStr(str, i, j+1);
+void allSubStr(string str, string output) {
+    if(str.length() == 0) {
+        cout << output << endl;
+        return;
     }
+
+    char ch = str[0];
+    string ros = str.substr(1);
+
+    allSubStr(ros, output);
+    allSubStr(ros, output + ch);
+}
+
+void subStringAscii(string str, string output) {
+    if(str.length() == 0) {
+        cout << output << endl;
+        return;
+    }
+
+    char ch = str[0];
+    int chAscii = ch;
+    string ros = str.substr(1);
+
+    subStringAscii(ros, output);
+    subStringAscii(ros, output + ch);
+    subStringAscii(ros, output + to_string(chAscii));
 }
 
 int main() {
@@ -159,11 +174,22 @@ int main() {
         eg: str = ABC, 
         output: "", "A", "B", "C", "AB", "AC", "BC", "ABC"
     */
+    // string str;
+    // cout << "Enter a string\n";
+    // cin >> str;
+
+    // allSubStr(str, "");
+
+    /*
+        7. Generate substring with ASCII number:
+        eg: str = AB
+        output: "", "B", "66", "A", "BA", "66A", "65", "B65", "6665"
+    */
     string str;
     cout << "Enter a string\n";
     cin >> str;
 
-    allSubStr(str, 0, 0);
+    subStringAscii(str, "");
     
 
     return 0;
